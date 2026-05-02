@@ -1,0 +1,115 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║              NOTIFICATION SYSTEM - QUICK REFERENCE CARD                     ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📁 PROJECT LOCATION:
+   c:\Users\DAKSH\OneDrive\Documents\logging Middleware\notification_app_fe
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🚀 START DEVELOPMENT (MOST COMMON):
+
+   npm run dev
+
+   • Opens http://localhost:3000
+   • Hot reload enabled
+   • Port 3000
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📋 ALL COMMANDS:
+
+   npm run dev              Development server with hot reload
+   npm run type-check       TypeScript type checking
+   npm run lint             ESLint code quality check
+   npm run build            Production build (creates dist/)
+   npm run preview          Preview production build
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚙️ CONFIGURATION:
+
+   Environment File: .env.local
+   Logger Token: demo-bearer-token-12345
+   Logger URL: http://20.207.122.201/evaluation-service/logs
+   API URL: http://localhost:3000/api
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📊 PROJECT STATUS:
+
+   [✓] 28 Files Created
+   [✓] 205 NPM Packages Installed
+   [✓] TypeScript: PASSED
+   [✓] ESLint: PASSED
+   [✓] Environment: CONFIGURED
+   [✓] Ready to Run
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 FEATURES:
+
+   ✓ Notification Dashboard
+   ✓ Create Notifications (form)
+   ✓ Notification List (with actions)
+   ✓ Logging Middleware Integrated
+   ✓ Form Validation
+   ✓ Error Handling
+   ✓ TypeScript Strict Mode
+   ✓ Pure CSS Styling
+   ✓ Responsive Design
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📁 STRUCTURE:
+
+   src/
+   ├── components/    (Header, Cards, Form, List)
+   ├── pages/         (Dashboard)
+   ├── hooks/         (Custom React hooks)
+   ├── services/      (API + Storage)
+   ├── types/         (TypeScript interfaces)
+   ├── utils/         (Helpers)
+   └── styles/        (CSS)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔗 URLS:
+
+   Development:  http://localhost:3000
+   Logger:       http://20.207.122.201/evaluation-service/logs
+   API:          http://localhost:3000/api
+
+═══════════════════════════════════════════════════════════════════════════════
+
+✨ QUICK START (3 STEPS):
+
+   Step 1: Navigate to project
+   cd "c:\Users\DAKSH\OneDrive\Documents\logging Middleware\notification_app_fe"
+
+   Step 2: Start dev server
+   npm run dev
+
+   Step 3: Open browser
+   http://localhost:3000
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📝 FILES CREATED:
+
+   Project Root (12):    Config files + HTML + docs
+   src/ (16):            App code + components + services
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🛠️ TECH STACK:
+
+   React 18 + TypeScript + Vite
+   Pure CSS (No external UI libraries)
+   Custom React Hooks for state
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎉 STATUS: ✅ READY TO RUN!
+
+═══════════════════════════════════════════════════════════════════════════════

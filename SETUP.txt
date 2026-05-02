@@ -1,0 +1,72 @@
+# Notification System - Installation & Setup Guide
+
+## Prerequisites
+- Node.js 18+ installed
+- npm or yarn package manager
+
+## Quick Start
+
+### 1. Install Dependencies
+```bash
+npm install
+```
+
+### 2. Configure Environment
+Create `.env.local` in the project root:
+```
+REACT_APP_LOGGER_TOKEN=your-bearer-token-here
+REACT_APP_LOGGER_URL=http://20.207.122.201/evaluation-service/logs
+REACT_APP_API_URL=http://localhost:3000/api
+REACT_APP_ENV=development
+```
+
+### 3. Run Development Server
+```bash
+npm run dev
+```
+App will open at http://localhost:3000
+
+### 4. Build for Production
+```bash
+npm run build
+```
+Output will be in `dist/` folder
+
+### 5. Type Checking
+```bash
+npm run type-check
+```
+
+### 6. Linting
+```bash
+npm run lint
+```
+
+## Project Structure
+- `src/components/` - React components
+- `src/pages/` - Page components
+- `src/hooks/` - Custom React hooks
+- `src/services/` - API and storage services
+- `src/types/` - TypeScript definitions
+- `src/utils/` - Helper functions
+- `src/styles/` - CSS files
+
+## Features
+✓ Notification dashboard with list and form
+✓ Create, read, update, delete notifications
+✓ Integrated logging middleware
+✓ Form validation
+✓ Error handling
+✓ Pure CSS styling
+✓ TypeScript strict mode
+✓ ESLint configuration
+
+## Logging Integration
+The app logs:
+- API calls (info level on start, debug on success, error on failure)
+- Page views
+- Form submissions
+- Validation errors
+- User actions
+
+All logs are sent to: http://20.207.122.201/evaluation-service/logs

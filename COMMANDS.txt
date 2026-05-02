@@ -1,0 +1,203 @@
+================================================================================
+                    NOTIFICATION SYSTEM - COMMANDS GUIDE
+================================================================================
+
+PROJECT LOCATION:
+c:\Users\DAKSH\OneDrive\Documents\logging Middleware\notification_app_fe
+
+================================================================================
+                            INSTALLATION
+================================================================================
+
+1. Navigate to project directory:
+   cd "c:\Users\DAKSH\OneDrive\Documents\logging Middleware\notification_app_fe"
+
+2. Install all dependencies:
+   npm install
+
+3. Configure environment (.env.local already created with defaults):
+   - Edit .env.local if needed
+   - Default token: demo-bearer-token-12345
+   - Default logger URL: http://20.207.122.201/evaluation-service/logs
+   - Default API URL: http://localhost:3000/api
+
+================================================================================
+                          DEVELOPMENT COMMANDS
+================================================================================
+
+Start Development Server:
+   npm run dev
+   - Opens app at http://localhost:3000
+   - Hot reload enabled
+   - Proxy to API at /api
+
+Type Checking:
+   npm run type-check
+   - Checks TypeScript errors
+   - No build output
+
+Linting:
+   npm run lint
+   - ESLint checks
+   - Reports code quality issues
+
+================================================================================
+                          PRODUCTION COMMANDS
+================================================================================
+
+Build for Production:
+   npm run build
+   - Creates optimized build in 'dist/' folder
+   - TypeScript compilation
+   - Minification
+   - Code splitting
+
+Preview Production Build:
+   npm run preview
+   - Preview dist build locally
+   - Use after running 'npm run build'
+
+================================================================================
+                          QUICK START SEQUENCE
+================================================================================
+
+Step 1 - Setup:
+   cd "c:\Users\DAKSH\OneDrive\Documents\logging Middleware\notification_app_fe"
+   npm install
+
+Step 2 - Start Dev Server:
+   npm run dev
+
+Step 3 - Open Browser:
+   http://localhost:3000
+
+Step 4 - Use the App:
+   - Fill in notification form (title + message)
+   - Click "Send Notification"
+   - View notifications in dashboard
+   - Mark as read or delete
+
+================================================================================
+                          PROJECT STRUCTURE
+================================================================================
+
+notification_app_fe/
+├── src/
+│   ├── components/          # React components
+│   │   ├── Header.tsx
+│   │   ├── NotificationCard.tsx
+│   │   ├── NotificationList.tsx
+│   │   └── SendNotificationForm.tsx
+│   ├── pages/               # Page components
+│   │   └── Dashboard.tsx
+│   ├── hooks/               # Custom React hooks
+│   │   ├── useNotifications.ts
+│   │   ├── usePageTracking.ts
+│   │   └── useForm.ts
+│   ├── services/            # API & Storage services
+│   │   ├── notificationService.ts
+│   │   └── storageService.ts
+│   ├── types/               # TypeScript types
+│   │   └── notification.ts
+│   ├── utils/               # Helper functions
+│   │   ├── dateFormatter.ts
+│   │   ├── errorHandler.ts
+│   │   └── validators.ts
+│   ├── styles/              # CSS files
+│   │   ├── globals.css
+│   │   └── components.css
+│   ├── log.ts               # Logging middleware (your existing file)
+│   ├── App.tsx              # Main app component
+│   └── main.tsx             # Entry point
+├── index.html               # HTML template
+├── package.json             # Dependencies & scripts
+├── tsconfig.json            # TypeScript config
+├── vite.config.ts           # Vite configuration
+├── .eslintrc.cjs            # ESLint config
+├── .env.local               # Environment variables (created)
+├── .env.example             # Environment template
+├── .gitignore               # Git ignore rules
+└── SETUP.txt                # This file
+
+================================================================================
+                          LOGGING FEATURES
+================================================================================
+
+All API calls log automatically:
+
+✓ API Calls:
+  - Log 'info' when request starts
+  - Log 'debug' when request succeeds
+  - Log 'error' when request fails
+
+✓ Page Events:
+  - Log 'info' when dashboard page loads
+
+✓ Form Events:
+  - Log 'info' when form submitted
+  - Log 'debug' on success
+  - Log 'warn' on validation errors
+
+✓ Component Actions:
+  - Log 'info' when notification created
+  - Log 'debug' when deleted
+  - Log 'debug' when marked as read
+
+Logger Configuration:
+  - Token: REACT_APP_LOGGER_TOKEN
+  - URL: REACT_APP_LOGGER_URL
+  - Timeout: 5000ms
+
+================================================================================
+                          ENVIRONMENT VARIABLES
+================================================================================
+
+REACT_APP_LOGGER_TOKEN
+  Default: demo-bearer-token-12345
+  Purpose: Bearer token for authentication with logging service
+
+REACT_APP_LOGGER_URL
+  Default: http://20.207.122.201/evaluation-service/logs
+  Purpose: Endpoint for sending logs
+
+REACT_APP_API_URL
+  Default: http://localhost:3000/api
+  Purpose: Base URL for notification API
+
+REACT_APP_ENV
+  Default: development
+  Purpose: Environment identifier
+
+================================================================================
+                          TROUBLESHOOTING
+================================================================================
+
+Port 3000 already in use?
+  - Kill process: netstat -ano | findstr :3000
+  - OR change port in vite.config.ts
+
+API Connection Issues?
+  - Check .env.local values
+  - Verify backend is running
+  - Check CORS headers
+
+Logger Not Working?
+  - Check REACT_APP_LOGGER_TOKEN
+  - Verify logger endpoint is accessible
+  - Check browser console for errors
+
+TypeScript Errors?
+  - Run: npm run type-check
+  - Check src/types/ for definitions
+
+================================================================================
+                          SCRIPTS SUMMARY
+================================================================================
+
+npm run dev          → Start development server (hot reload)
+npm run build        → Create production build
+npm run preview      → Preview production build
+npm run type-check   → Check TypeScript errors
+npm run lint         → Run ESLint checks
+
+================================================================================
